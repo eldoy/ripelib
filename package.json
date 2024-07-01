@@ -1,0 +1,19 @@
+{
+  "name": "ripelib",
+  "version": "0.1.0",
+  "description": "Ripe lib functions and scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldoy/ripelib.git"
+  },
+  "author": "Vidar Eldøy <vidar@eldoy.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eldoy/ripelib/issues"
+  },
+  "homepage": "https://github.com/eldoy/ripelib#readme"
+}
