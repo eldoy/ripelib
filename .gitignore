@@ -84,3 +84,6 @@ sw.*
 
 # Mac OSX
 .DS_Store
+
+# RIPE Data
+data

@@ -4,7 +4,8 @@
   "description": "Ripe lib functions and scripts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "download": "node scripts/download.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/eldoy/ripelib/issues"
   },
-  "homepage": "https://github.com/eldoy/ripelib#readme"
+  "homepage": "https://github.com/eldoy/ripelib#readme",
+  "dependencies": {
+    "dugg": "^0.4.0"
+  }
 }
