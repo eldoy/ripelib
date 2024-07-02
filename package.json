@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/eldoy/ripelib#readme",
   "dependencies": {
-    "dugg": "^0.4.0"
+    "dugg": "^0.4.0",
+    "extras": "^0.13.2"
   }
 }
