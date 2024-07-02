@@ -1,4 +1,4 @@
-var data = require('./data/ripencc-latest.json')
+var data = require('./data/delegated-ripencc-latest.json')
 
 function normalize(str, type) {
   var delimiter = type == 'ipv4' ? '.' : ':'
