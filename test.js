@@ -1,8 +1,9 @@
 var ripe = require('./index.js')
 
-// var ip = '89.115.187.83'
-// var ip = '2001:818:dcd4:c100:3139:b31a:7fe8:3eba'
 var ip = '182.50.176.0'
+// var ip = '103.174.156.184'
 
+console.time('time')
 var location = ripe.ip2location(ip)
 console.log(location)
+console.timeEnd('time')
