@@ -92,8 +92,8 @@ async function run() {
   var ipv4 = ips.filter(({ type }) => type == 'ipv4')
   var ipv6 = ips.filter(({ type }) => type == 'ipv6')
 
-  fs.writeFileSync(`./data/ipv4.json`, JSON.stringify(ipv4, null, 2))
-  fs.writeFileSync(`./data/ipv6.json`, JSON.stringify(ipv6, null, 2))
+  fs.writeFileSync(`./data/ipv4.json`, JSON.stringify(ipv4))
+  fs.writeFileSync(`./data/ipv6.json`, JSON.stringify(ipv6))
   fs.writeFileSync(`./data/iso31661.json`, JSON.stringify(iso31661, null, 2))
 }
 
