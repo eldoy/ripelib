@@ -1,34 +1,23 @@
-var data = require('./data/delegated-ripencc-latest.json')
-
-function normalize(str, type) {
-  var delimiter = type == 'ipv4' ? '.' : ':'
-  var size = type == 'ipv4' ? 3 : 4
-
-  return str.split(delimiter).map((i) => {
-    if (i.length != size) {
-      var arr = Array(size - i.length).fill(0)
-      return [...arr, i].join('')
-    }
-    return i
-  })
-}
+var ipv4 = require('./data/ipv4.json')
+var ipv6 = require('./data/ipv6.json')
+var ipaddr = require('ipaddr.js')
 
 module.exports = {
   ip2location: function (input) {
-    var ip
+    var ip = ipaddr.parse(input)
+    var data = []
 
-    var inputType = 'asn'
-    if (input.includes('.')) inputType = 'ipv4'
-    if (input.includes(':')) inputType = 'ipv6'
+    if (input.includes('.')) {
+      data = ipv4
+    }
 
-    var result = data
-      .filter(({ type }) => type == inputType)
-      .find(({ type, from, to }) => {
-        ip = normalize(input, inputType)
-        from = normalize(from, type)
-        to = normalize(to, type)
-        return ip >= from && ip < to
-      })
+    if (input.includes(':')) {
+      data = ipv6
+    }
+
+    var result = data.find(({ cidr }, idx) => {
+      return ip.match(ipaddr.parseCIDR(cidr))
+    })
 
     return { ip: input, country: result?.country }
   }
