@@ -19,15 +19,15 @@ it('should return country', async ({ t, $ }) => {
   result = $.ripe.ip2location(ip)
   t.deepStrictEqual(result, { ip, country: 'United States of America' })
 
-  ip = '103.116.13.229',
+  ip = '103.116.13.229'
   result = $.ripe.ip2location(ip)
   t.deepStrictEqual(result, { ip, country: 'Indonesia' })
 
-  ip = '45.124.58.4',
+  ip = '45.124.58.4'
   result = $.ripe.ip2location(ip)
   t.deepStrictEqual(result, { ip, country: 'Philippines' })
 
-  ip = '180.244.129.164',
+  ip = '180.244.129.164'
   result = $.ripe.ip2location(ip)
   t.deepStrictEqual(result, { ip, country: 'Indonesia' })
 })
